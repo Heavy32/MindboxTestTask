@@ -23,8 +23,8 @@ VALUES (1, 'Socks'),
 	   (2, 'Milk'),
 	   (3, 'Lamp'),
 	   (4, 'Coca-Cola'),
-	   (5, 'Sausages'); 
-     (6, 'Ball')
+	   (5, 'Sausages')
+           (6, 'Ball')
 
 INSERT INTO Categories(Id, Name)
 VALUES (1, 'Clothes'),
@@ -35,14 +35,14 @@ VALUES (1, 'Clothes'),
 
 INSERT INTO ProductsCategories (ProductId, CategoryId)
 VALUES (1, 1),
-	   (1, 4),
-	   (1, 5),
-	   (2, 2),
-	   (3, 3),
-	   (3, 5),
-	   (4, 2),
-	   (4, 4),
-	   (5, 4);
+       (1, 4),
+       (1, 5),
+       (2, 2),
+       (3, 3),
+       (3, 5),
+       (4, 2),
+       (4, 4),
+       (5, 4);
 
 Select Products.Name, Categories.Name from ProductsCategories
 INNER JOIN Categories
