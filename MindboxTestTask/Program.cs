@@ -1,8 +1,4 @@
-﻿using LogicInFigureVersion;
-
-using System;
-
-namespace MindboxTestTask
+﻿namespace MindboxTestTask
 {
     internal class Program
     {
@@ -10,6 +6,7 @@ namespace MindboxTestTask
         {
             LogicInClass();
             SquareCalculatorFactory();
+            FigureServices();
         }
 
         static void LogicInClass()
@@ -25,6 +22,14 @@ namespace MindboxTestTask
             SquareCalculatorFactoryVersion.Figures.Circle circle = new() {  Radius = 5 };
             SquareCalculatorFactoryVersion.Calculator.SquareCalculators.SquareCalculatorFactories.SquareCalculatorFactory factory = new();
             SquareCalculatorFactoryVersion.Calculator.ICalculator calculator = new SquareCalculatorFactoryVersion.Calculator.Calculator(factory);
+
+            double square = calculator.GetSquare(circle);
+        }
+
+        static void FigureServices()
+        {
+            FigureServicesVersion.Figures.Circle circle = new() { Radius = 5 };
+            FigureServicesVersion.Calculator.ICalculator<FigureServicesVersion.Figures.Circle> calculator = new FigureServicesVersion.Calculator.CircleCalculator();
 
             double square = calculator.GetSquare(circle);
         }

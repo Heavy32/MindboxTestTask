@@ -21,6 +21,11 @@ namespace LogicInFigureVersion
         { 
             get 
             {
+                if (A <= 0 || B <= 0 || C <= 0)
+                {
+                    throw new ArgumentException("One of the triangle's side is less or equal zero");
+                }
+
                 double halfPerimeter = (A + B + C) / 2;
                 return Math.Sqrt(halfPerimeter * (halfPerimeter - A) * (halfPerimeter - B) * (halfPerimeter - C));
             } 
